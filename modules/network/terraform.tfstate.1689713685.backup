@@ -1,0 +1,1121 @@
+{
+  "version": 4,
+  "terraform_version": "1.3.3",
+  "serial": 132,
+  "lineage": "dfac236d-22a4-700d-5c39-01925a5d673f",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_eip",
+      "name": "nat1",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": null,
+            "allocation_id": "eipalloc-06105055562b98f3b",
+            "associate_with_private_ip": null,
+            "association_id": "",
+            "carrier_ip": "",
+            "customer_owned_ip": "",
+            "customer_owned_ipv4_pool": "",
+            "domain": "vpc",
+            "id": "eipalloc-06105055562b98f3b",
+            "instance": "",
+            "network_border_group": "us-east-1",
+            "network_interface": "",
+            "private_dns": null,
+            "private_ip": "",
+            "public_dns": "ec2-44-217-25-129.compute-1.amazonaws.com",
+            "public_ip": "44.217.25.129",
+            "public_ipv4_pool": "amazon",
+            "tags": {
+              "Name": "nwg1"
+            },
+            "tags_all": {
+              "Name": "nwg1"
+            },
+            "timeouts": null,
+            "vpc": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxODAwMDAwMDAwMDAsInJlYWQiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_eip",
+      "name": "nat2",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": null,
+            "allocation_id": "eipalloc-0409951a2e49f30f6",
+            "associate_with_private_ip": null,
+            "association_id": "",
+            "carrier_ip": "",
+            "customer_owned_ip": "",
+            "customer_owned_ipv4_pool": "",
+            "domain": "vpc",
+            "id": "eipalloc-0409951a2e49f30f6",
+            "instance": "",
+            "network_border_group": "us-east-1",
+            "network_interface": "",
+            "private_dns": null,
+            "private_ip": "",
+            "public_dns": "ec2-52-86-200-156.compute-1.amazonaws.com",
+            "public_ip": "52.86.200.156",
+            "public_ipv4_pool": "amazon",
+            "tags": {
+              "Name": "nwg2"
+            },
+            "tags_all": {
+              "Name": "nwg2"
+            },
+            "timeouts": null,
+            "vpc": true
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxODAwMDAwMDAwMDAsInJlYWQiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "igw",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:internet-gateway/igw-0e89d4bc33216eca6",
+            "id": "igw-0e89d4bc33216eca6",
+            "owner_id": "207650910957",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-igw",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-igw",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "ngw1",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_id": "eipalloc-06105055562b98f3b",
+            "association_id": "eipassoc-0d7cb37697fae89d6",
+            "connectivity_type": "public",
+            "id": "nat-08ea93d24ab3805bb",
+            "network_interface_id": "eni-08e63d8f017f74663",
+            "private_ip": "192.168.1.152",
+            "public_ip": "44.217.25.129",
+            "subnet_id": "subnet-0c8cad1e18c1aabb5",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-ngwa",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-ngwa",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_eip.nat1",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "ngw2",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_id": "eipalloc-0409951a2e49f30f6",
+            "association_id": "eipassoc-064a48c77af432357",
+            "connectivity_type": "public",
+            "id": "nat-0df8833a30acb6147",
+            "network_interface_id": "eni-039c87ea3944da8f3",
+            "private_ip": "192.168.2.245",
+            "public_ip": "52.86.200.156",
+            "subnet_id": "subnet-09c5296206814a3d8",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-ngwb",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-ngwb",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_eip.nat2",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "rtapp1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:route-table/rtb-0755b42900a15e463",
+            "id": "rtb-0755b42900a15e463",
+            "owner_id": "207650910957",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "nat-08ea93d24ab3805bb",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtprivate1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtprivate1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat1",
+            "aws_nat_gateway.ngw1",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "rtapp1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:route-table/rtb-0f9fd9f03afc101de",
+            "id": "rtb-0f9fd9f03afc101de",
+            "owner_id": "207650910957",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "nat-0df8833a30acb6147",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtprivate1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtprivate1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat2",
+            "aws_nat_gateway.ngw2",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "rtdb1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:route-table/rtb-0f44e103063a3a724",
+            "id": "rtb-0f44e103063a3a724",
+            "owner_id": "207650910957",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "nat-08ea93d24ab3805bb",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtdb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtdb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat1",
+            "aws_nat_gateway.ngw1",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "rtdb1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:route-table/rtb-02eff8365847df0e2",
+            "id": "rtb-02eff8365847df0e2",
+            "owner_id": "207650910957",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "nat-0df8833a30acb6147",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtdb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtdb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat2",
+            "aws_nat_gateway.ngw2",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "rtpub",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:route-table/rtb-0ead4e70ed36a868d",
+            "id": "rtb-0ead4e70ed36a868d",
+            "owner_id": "207650910957",
+            "propagating_vgws": [],
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0e89d4bc33216eca6",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtpublic",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-rtpublic",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.igw",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsub1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-003e1bff978151e3b",
+            "route_table_id": "rtb-0ead4e70ed36a868d",
+            "subnet_id": "subnet-0c8cad1e18c1aabb5",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.igw",
+            "aws_route_table.rtpub",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsub1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0547efc64fb78a41f",
+            "route_table_id": "rtb-0ead4e70ed36a868d",
+            "subnet_id": "subnet-09c5296206814a3d8",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_internet_gateway.igw",
+            "aws_route_table.rtpub",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsubapp1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-07f838474d7eae9f4",
+            "route_table_id": "rtb-0755b42900a15e463",
+            "subnet_id": "subnet-0bd4cc2d34301b9ed",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat1",
+            "aws_nat_gateway.ngw1",
+            "aws_route_table.rtapp1a",
+            "aws_subnet.app1a",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsubapp1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0f6684505396a33cf",
+            "route_table_id": "rtb-0f9fd9f03afc101de",
+            "subnet_id": "subnet-04dda18a3e521cecf",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat2",
+            "aws_nat_gateway.ngw2",
+            "aws_route_table.rtapp1b",
+            "aws_subnet.app1b",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsubdb1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-08b29ff96a38f3711",
+            "route_table_id": "rtb-0f44e103063a3a724",
+            "subnet_id": "subnet-00541d067b4695609",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat1",
+            "aws_nat_gateway.ngw1",
+            "aws_route_table.rtdb1a",
+            "aws_subnet.db1a",
+            "aws_subnet.web1a",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "rtsubdb1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0459065f97227ac6f",
+            "route_table_id": "rtb-02eff8365847df0e2",
+            "subnet_id": "subnet-0984ab01f6793e202",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_eip.nat2",
+            "aws_nat_gateway.ngw2",
+            "aws_route_table.rtdb1b",
+            "aws_subnet.db1b",
+            "aws_subnet.web1b",
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "app1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-0bd4cc2d34301b9ed",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1a",
+            "availability_zone_id": "use1-az1",
+            "cidr_block": "192.168.3.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0bd4cc2d34301b9ed",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetapp1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetapp1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "app1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-04dda18a3e521cecf",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1b",
+            "availability_zone_id": "use1-az2",
+            "cidr_block": "192.168.4.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-04dda18a3e521cecf",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetapp1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetapp1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "db1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-00541d067b4695609",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1a",
+            "availability_zone_id": "use1-az1",
+            "cidr_block": "192.168.5.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-00541d067b4695609",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetdb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetdb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "db1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-0984ab01f6793e202",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1b",
+            "availability_zone_id": "use1-az2",
+            "cidr_block": "192.168.6.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0984ab01f6793e202",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetdb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetdb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "web1a",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-0c8cad1e18c1aabb5",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1a",
+            "availability_zone_id": "use1-az1",
+            "cidr_block": "192.168.1.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0c8cad1e18c1aabb5",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetweb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetweb1a",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "web1b",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:subnet/subnet-09c5296206814a3d8",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "us-east-1b",
+            "availability_zone_id": "use1-az2",
+            "cidr_block": "192.168.2.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-09c5296206814a3d8",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_native": false,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "207650910957",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetweb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-subnetweb1b",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-02abcd3cd3782c1da"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "aws_vpc.vpcproducts"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "vpcproducts",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:us-east-1:207650910957:vpc/vpc-02abcd3cd3782c1da",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "192.168.0.0/16",
+            "default_network_acl_id": "acl-0a5a8ebd86e409297",
+            "default_route_table_id": "rtb-0d8b142f06de8650e",
+            "default_security_group_id": "sg-023ba7125263bbd90",
+            "dhcp_options_id": "dopt-03ec4ddd029aab80f",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "id": "vpc-02abcd3cd3782c1da",
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_network_border_group": "",
+            "ipv6_ipam_pool_id": "",
+            "ipv6_netmask_length": 0,
+            "main_route_table_id": "rtb-0d8b142f06de8650e",
+            "owner_id": "207650910957",
+            "tags": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-vpc",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            },
+            "tags_all": {
+              "AssetID": "2560",
+              "AssetName": "Insfrastructure",
+              "CreateBy": "Terraform",
+              "Environment": "dev",
+              "Name": "2560-dev-alpha-vpc",
+              "Project": "alpha",
+              "Teams": "DEL",
+              "cloudProvider": "aws"
+            }
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": []
+}
