@@ -39,7 +39,7 @@ locals {
 
 }
 
-module "ekscp" {
+module "ekscplane" {
   source                  = "../../../modules/ekscplane"
   aws_region              = local.aws_region
   control_plane_version   = local.control_plane_version
