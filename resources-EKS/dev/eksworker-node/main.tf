@@ -14,7 +14,7 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket         = "geolocation-bucket"
+    bucket         = "geolocation-buckets"
     key            = "eksworker-node/dev-geolocation/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "geolocation_table"
@@ -49,7 +49,7 @@ locals {
 }
 
 module "eksworker-node" {
-  source       = "../../modules/eksnodeg"
+  source       = "../../../modules/eksworker-node"
   desired_size = local.desired_size
   min_size     = local.min_size
   max_size     = local.max_size

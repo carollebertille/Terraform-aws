@@ -14,7 +14,7 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket         = "geolocation-bucket"
+    bucket         = "geolocation-buckets"
     key            = "ekscplane/dev-geolocation/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "geolocation_table"
@@ -40,7 +40,7 @@ locals {
 }
 
 module "ekscp" {
-  source                  = "../../modules/ekscp"
+  source                  = "../../../modules/ekscplane"
   aws_region              = local.aws_region
   control_plane_version   = local.control_plane_version
   endpoint_private_access = local.endpoint_private_access

@@ -43,14 +43,14 @@ locals {
 
 terraform {
   backend "s3" {
-    bucket         = "geolocation-bucket"
+    bucket         = "geolocation-buckets"
     key            = "network/dev-geolocation/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "geolocation_table"
   }
 }
 module "vpc" {
-    source = "../../../modules/network"
+    source = "../../../modules-EKS/network/"
     cidr_block = local.cidr_block
     region = local.region
     subnet = local.subnet
