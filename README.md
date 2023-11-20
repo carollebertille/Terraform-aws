@@ -22,11 +22,12 @@ This tutorial will demonstrate how to create a **AWS Elastic Kubernetes Service 
 
 <br>
 
-Deployment 
+Deployment of EKS in AWS
 
-To deploy the EKS Cluster we purpose two methods : 
+To deploy the EKS Cluster we will use terraform as infrastructure as code tool very powerfull provide multiple avantages:
 
- # Infrastructure as Code (IaC) with terraform 
+
+
 
 
 
