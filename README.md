@@ -26,8 +26,8 @@ Deployment
 
 To deploy the EKS Cluster we purpose two methods : 
 
--  [Infrastructure as Code (IaC)](https://github.com/sokube/aws-eks/tree/master/infrastructure-as-code) tutorial with AWS CloudFormation,
--  [AWS Command Line Interface](https://github.com/sokube/aws-eks/tree/master/aws-cli) tutorial with shell tool.
+-  [Infrastructure as Code (IaC)]  with terraform CloudFormation,
+
 
 <br>
 # Infrastructure 
