@@ -29,7 +29,4 @@ To deploy the EKS Cluster we purpose two methods :
 -  [Infrastructure as Code (IaC)]  with terraform CloudFormation,
 
 
-<br>
-# Infrastructure 
 
-## EKS Architecture for Control Plane and Worker Node 
