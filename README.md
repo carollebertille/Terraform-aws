@@ -26,7 +26,7 @@ Deployment
 
 To deploy the EKS Cluster we purpose two methods : 
 
--  [Infrastructure as Code (IaC)]  with terraform CloudFormation,
+ # Infrastructure as Code (IaC) with terraform 
 
 
 
