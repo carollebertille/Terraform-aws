@@ -29,16 +29,16 @@ To deploy the EKS Cluster we will use terraform as infrastructure as code tool v
 - ##### Declarative Syntax:
 Terraform uses a declarative language to describe the desired state of your infrastructure. This makes it easy to understand and manage, as you specify what you want rather than the step-by-step process of achieving it.
 
-- Multi-Cloud Support:
+- ##### Multi-Cloud Support:
 Terraform is cloud-agnostic and supports multiple cloud providers (AWS, Azure, Google Cloud, etc.) and even on-premises environments. This allows you to manage infrastructure consistently across different cloud platforms.
 
-- State Management:
+- ##### State Management:
 Terraform maintains a state file that keeps track of the current state of your infrastructure. This state file is crucial for understanding what resources Terraform manages and allows for collaboration in a team environment.
 
-- Modularity and Reusability:
+- ##### Modularity and Reusability:
 Terraform supports modules, allowing you to modularize your infrastructure code. Modules enable reusability and maintainability by encapsulating specific sets of resources with well-defined interfaces.
 
-- Automation and Continuous Integration:
+- #### Automation and Continuous Integration:
 Terraform integrates well with continuous integration/continuous deployment (CI/CD) pipelines. You can automate the testing and deployment of infrastructure changes as part of your development workflow.
 
 
