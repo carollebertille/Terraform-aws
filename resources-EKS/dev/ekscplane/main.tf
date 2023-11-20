@@ -40,7 +40,7 @@ locals {
 }
 
 module "ekscplane" {
-  source                  = "../../../modules/ekscplane"
+  source                  = "../../../modules-EKS/ekscplane"
   aws_region              = local.aws_region
   control_plane_version   = local.control_plane_version
   endpoint_private_access = local.endpoint_private_access

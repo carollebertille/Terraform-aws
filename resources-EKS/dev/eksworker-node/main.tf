@@ -49,7 +49,7 @@ locals {
 }
 
 module "eksworker-node" {
-  source       = "../../../modules/eksworker-node"
+  source       = "../../../modules-EKS/eksworker-node"
   desired_size = local.desired_size
   min_size     = local.min_size
   max_size     = local.max_size
