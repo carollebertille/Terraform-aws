@@ -1,6 +1,8 @@
 provider "aws" {
     region = local.region
-}terraform {
+}
+
+terraform {
   required_version = ">= 1.0.0"
   required_providers {
     aws = {
