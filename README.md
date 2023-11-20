@@ -26,7 +26,7 @@ Deployment of EKS in AWS
 
 To deploy the EKS Cluster we will use terraform as infrastructure as code tool very powerfull provide multiple avantages:
 
-- ### Declarative Syntax:
+- ##### Declarative Syntax:
 Terraform uses a declarative language to describe the desired state of your infrastructure. This makes it easy to understand and manage, as you specify what you want rather than the step-by-step process of achieving it.
 
 - Multi-Cloud Support:
