@@ -1,6 +1,8 @@
 provider "aws" {
     region = local.region
-}terraform {
+}
+
+terraform {
   required_version = ">= 1.0.0"
   required_providers {
     aws = {
@@ -43,7 +45,7 @@ locals {
 
 terraform {
   backend "s3" {
-    bucket         = "geolocation-bucket"
+    bucket         = "geolocation-buckets"
     key            = "network/dev-geolocation/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "geolocation_table"
