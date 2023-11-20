@@ -12,3 +12,16 @@
 <br>
 
 # Description of project
+This tutorial will demonstrate how to create a **AWS Elastic Kubernetes Service (EKS)** managed cluster. This will be done in 3 mains steps :
+
+- __Networking Setup__, in this section we will set up AWS network environment by creating different resources like a Virtual Private Cloud (VPC), Internet Gateway (IGW),  Nat Gateway (NGW) Route Table, Routes, Subnets and Security Group (SG).
+
+- __AWS EKS Cluster__, then in this section, we will create IAM Cluster Control Plane Role, provision EKS Control Plane, IAM Node Group Role and provision Node Group Node Group is the name given by AWS to describe group of worker nodes).
+
+- __Cluster Testing__, finally we will deploy a wordpress application in the EKS Cluster to verify that it's working as expected.
+
+<br>
+
+# Infrastructure 
+
+## EKS Architecture for Control Plane and Worker Node 
