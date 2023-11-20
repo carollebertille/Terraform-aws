@@ -21,12 +21,5 @@ jobs:
         aws-region: us-east-1
 
     - name: Initialize Terraform
-      run: ./deploy-eks.yml
+      run:  bash deploy-eks.yml
 
-
-    - name: Configure kubectl
-      run: aws eks --region us-east-1 update-kubeconfig --name your-eks-cluster-name
-
-    - name: Deploy your application
-      run: |
-        kubectl apply -k ./

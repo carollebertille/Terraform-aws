@@ -1,27 +1,20 @@
 #!/bin/bash
-cd network
-          
+cd resources-EKS/dev/network       
 pwd
-
 terraform init
-sleep 1
-terraform plan
 sleep 1
 terraform apply --auto-approve
 sleep 1
 
 echo "Creation of network was successfull"
 
-echo "Install EKS" 
+echo "Install EKS-Control Plane" 
 
-cd ..
-cd ekscp
+cd ../ekscplane
 
 pwd
 
 terraform init
-sleep 1
-terraform plan
 sleep 1
 terraform apply --auto-approve
 sleep 1
@@ -30,15 +23,13 @@ echo "Creation of control plan was successfull"
 
 echo "Install worker node" 
 
-cd ../eksnodeg
+cd ../eksworker-node
 
 pwd 
  
 
 
 terraform init
-sleep 2
-terraform plan
 sleep 2
 terraform apply --auto-approve
 sleep 5
@@ -47,28 +38,19 @@ echo "Creation of data plane was successfull"
 
 echo "Import kubeconfig to the current directory " 
 
-cd ../ekscp
 
-aws eks update-kubeconfig --name 2526-dev-alpha   --region us-east-1
+aws eks update-kubeconfig --name 2021-dev-alpha   --region us-east-1
 
 echo "check the state of the nodes"
 
-kubectl get nodes -o wide
+kubectl get nodes
 
-sleep 3
-
-
-
-
-
-#sleep 3
-#echo "install application and service-geolocation"
-#kubectl apply -f geolocation1.yml
-#kubectl apply -f geolocation1-svc.yml
+slepp 5
+echo "install wordpress application"
+kubectl apply -k ./
 
 sleep 10
-kubectl get pods
-kubectl get svc
+kubectl get deploy, svc, hpa
 
 sleep 5
 
@@ -85,15 +67,15 @@ sleep 5
 
 #echo "Creation of datadog was successfull"
 
-echo "Install argocd"   
+#echo "Install argocd"   
 
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+#kubectl create namespace argocd
+#kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-echo "Creation of argocd was successfull"
+#echo "Creation of argocd was successfull"
 
-kubectl get pods -n argocd
-kubectl get svc -n argocd  
+#kubectl get pods -n argocd
+#kubectl get svc -n argocd  
 
 
 
