@@ -1,7 +1,0 @@
-resources:
-  - wordpress-deploy.yml
-  - mysql-deploy.yml
-  - wordpress-svc.yml
-  - mysql-svc.yml
-  - secret.yml
-  - hpa.yml
