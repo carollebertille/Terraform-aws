@@ -5,6 +5,7 @@ cd resources-EKS/eksworker-node
 pwd
 
 sleep 1
+terraform init
 terraform destroy --auto-approve
 sleep 1
 
@@ -18,6 +19,7 @@ pwd
 
 
 sleep 1
+terraform init
 terraform destroy --auto-approve
 sleep 1
 
@@ -29,6 +31,7 @@ cd ../network
 
 pwd 
 sleep 2
+terraform init
 terraform destroy --auto-approve
 sleep 5
 
