@@ -54,6 +54,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 echo "Creation of argocd was successfull"
 
+sleep 10
+
 kubectl get pods -n argocd
 kubectl get svc -n argocd 
 
