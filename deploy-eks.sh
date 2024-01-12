@@ -64,6 +64,9 @@ kubectl patch service argocd-server -n argocd --type='json' -p '[{"op": "replace
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
+
+aws s3 ls
+
    
 
 
